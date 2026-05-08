@@ -836,7 +836,7 @@ export default function App() {
             </div>
             <p className="df-payment-note">
               <CheckCircle2 size={16} />
-              Studio annual is selected. Annual saves 50%.
+              <span>Studio annual selected. Annual saves 50%.</span>
             </p>
 
             <div className="df-trust-row">

@@ -1225,6 +1225,10 @@ h3 {
     display: none;
   }
 
+  .df-nav {
+    display: none;
+  }
+
   h1,
   .df-article h1,
   .df-pricing-page-hero h1 {
