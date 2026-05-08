@@ -125,7 +125,22 @@ await writeStaticPage('/privacy', {
   description: 'How Paseo Code handles analytics, checkout metadata, and managed-site interactions.',
   robots: 'index,follow',
   canonicalPath: '/privacy',
-  rootHtml: buildLegalPrerender('Privacy Policy', 'This policy covers analytics, checkout, and user interactions on the Paseo Code site.'),
+  rootHtml: buildLegalPrerender('Privacy Policy', 'This policy covers analytics, checkout, and user interactions on the Paseo Code site.', [
+    {
+      heading: 'Data minimization',
+      paragraphs: [
+        'Paseo Code collects only the information reasonably needed to operate the website, process checkout, prevent abuse, and respond to support.',
+        'The public planner does not require private repositories, credentials, secrets, files, source code, or production data.',
+      ],
+    },
+    {
+      heading: 'Providers and contact',
+      paragraphs: [
+        'Cloudflare supports hosting and security infrastructure. Creem supports hosted checkout and payment processing.',
+        'Privacy and support requests should be sent to support@aigeamy.com.',
+      ],
+    },
+  ]),
   structuredData: [],
 })
 
@@ -134,7 +149,22 @@ await writeStaticPage('/terms', {
   description: 'Terms for using the Paseo Code managed site, hosted payment flow, and related support services.',
   robots: 'index,follow',
   canonicalPath: '/terms',
-  rootHtml: buildLegalPrerender('Terms of Service', 'These terms describe the limits and responsibilities of the Paseo Code site.'),
+  rootHtml: buildLegalPrerender('Terms of Service', 'These terms describe the limits and responsibilities of the Paseo Code site.', [
+    {
+      heading: 'Review required',
+      paragraphs: [
+        'Paseo Code is provided for supervised coding-agent workflows. AI-assisted output may be incomplete, inaccurate, insecure, infringing, unsuitable, or wrong.',
+        'Users are responsible for reviewing, testing, validating, and approving output before relying on it.',
+      ],
+    },
+    {
+      heading: 'Limits and disputes',
+      paragraphs: [
+        'To the maximum extent permitted by law, Paseo Code is provided as is, liability is limited, and disputes must be handled individually rather than as class or representative actions.',
+        'Support requests and dispute notices should be sent to support@aigeamy.com.',
+      ],
+    },
+  ]),
   structuredData: [],
 })
 
@@ -283,13 +313,24 @@ function buildKeywordPrerender(page) {
     </main>`
 }
 
-function buildLegalPrerender(title, description) {
+function buildLegalPrerender(title, description, sections = []) {
+  const sectionHtml = sections
+    .map(
+      (section) => `
+        <section>
+          <h2>${escapeHtml(section.heading)}</h2>
+          ${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('\n')}
+        </section>`,
+    )
+    .join('\n')
+
   return `
     <main class="df-main">
       <article class="df-article">
         <a href="/">Paseo Code</a>
         <h1>${escapeHtml(title)}</h1>
         <p class="df-lede">${escapeHtml(description)}</p>
+        ${sectionHtml}
       </article>
     </main>`
 }
