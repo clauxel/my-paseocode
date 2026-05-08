@@ -173,7 +173,7 @@ export const keywordPages: KeywordPage[] = [
       {
         heading: 'Public source and trust',
         paragraphs: [
-          'For this site build, the public project repository is expected at github.com/clauxel/my-paseocode after launch. Use it to review the website, Cloudflare worker, sitemap, and checkout routing implementation.',
+          'The public project repository is at github.com/clauxel/my-paseocode. Use it to review the website, Cloudflare worker, sitemap, and checkout routing implementation.',
           'For agent-harness architecture ideas, also inspect serious open-source projects directly before exposing any private repository or credentials.',
         ],
       },
