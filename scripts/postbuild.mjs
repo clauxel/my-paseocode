@@ -127,7 +127,7 @@ await writeStaticPage('/privacy', {
   canonicalPath: '/privacy',
   rootHtml: buildLegalPrerender('Privacy Policy', 'This policy covers analytics, checkout, and user interactions on the Paseo Code site.', [
     {
-      heading: 'Data minimization',
+      heading: 'What we collect',
       paragraphs: [
         'Paseo Code collects only the information reasonably needed to operate the website, process checkout, prevent abuse, and respond to support.',
         'The public planner does not require private repositories, credentials, secrets, files, source code, or production data.',
@@ -138,6 +138,27 @@ await writeStaticPage('/privacy', {
       paragraphs: [
         'Cloudflare supports hosting and security infrastructure. Creem supports hosted checkout and payment processing.',
         'Privacy and support requests should be sent to support@aigeamy.com.',
+      ],
+    },
+    {
+      heading: 'Security, retention, and deletion',
+      paragraphs: [
+        'No internet service can be guaranteed perfectly secure. Users should not submit credentials, secrets, regulated data, or highly sensitive information through the public planner.',
+        'Information is retained only as long as reasonably needed for support, security, accounting, fraud prevention, dispute handling, and legal compliance.',
+      ],
+    },
+    {
+      heading: 'Your choices and rights',
+      paragraphs: [
+        'Depending on your location, you may have rights to request access, correction, deletion, portability, restriction, or objection regarding personal information we control.',
+        'California and other privacy laws may provide additional rights when their thresholds and conditions apply.',
+      ],
+    },
+    {
+      heading: 'Children, changes, and contact',
+      paragraphs: [
+        'Paseo Code is intended for business and developer audiences and is not directed to children under 13.',
+        'Questions about privacy, support, or data handling should be sent to support@aigeamy.com.',
       ],
     },
   ]),
@@ -151,16 +172,38 @@ await writeStaticPage('/terms', {
   canonicalPath: '/terms',
   rootHtml: buildLegalPrerender('Terms of Service', 'These terms describe the limits and responsibilities of the Paseo Code site.', [
     {
-      heading: 'Review required',
+      heading: 'Acceptance and review required',
       paragraphs: [
         'Paseo Code is provided for supervised coding-agent workflows. AI-assisted output may be incomplete, inaccurate, insecure, infringing, unsuitable, or wrong.',
         'Users are responsible for reviewing, testing, validating, and approving output before relying on it.',
       ],
     },
     {
-      heading: 'Limits and disputes',
+      heading: 'Payments and third-party services',
       paragraphs: [
-        'To the maximum extent permitted by law, Paseo Code is provided as is, liability is limited, and disputes must be handled individually rather than as class or representative actions.',
+        'Payments are processed by Creem in a hosted popup window. Successful checkouts return the user to the homepage.',
+        'Cloudflare, Creem, GitHub, model providers, infrastructure providers, and other third-party services may be involved in hosting, checkout, integrations, or workflows.',
+      ],
+    },
+    {
+      heading: 'No warranties',
+      paragraphs: [
+        'Paseo Code is provided as is and as available. To the maximum extent permitted by law, all express, implied, statutory, and other warranties are disclaimed.',
+        'We do not warrant uninterrupted service, error-free operation, complete security, accuracy of AI output, revenue results, rankings, conversion results, or business outcomes.',
+      ],
+    },
+    {
+      heading: 'Limitation of liability',
+      paragraphs: [
+        'To the maximum extent permitted by law, Paseo Code and its operators, affiliates, suppliers, and service providers will not be liable for indirect, incidental, special, consequential, exemplary, punitive, or lost-profit damages.',
+        'To the maximum extent permitted by law, total liability for any claim is limited to the greater of 100 USD or the amount paid for Paseo Code in the three months before the event giving rise to the claim.',
+      ],
+    },
+    {
+      heading: 'Disputes',
+      paragraphs: [
+        'Before filing a claim, you agree to email support@aigeamy.com and give us 30 days to try to resolve the dispute informally.',
+        'To the maximum extent permitted by law, disputes must be handled individually rather than as class, collective, consolidated, private attorney general, or representative actions.',
         'Support requests and dispute notices should be sent to support@aigeamy.com.',
       ],
     },
@@ -266,7 +309,15 @@ function buildHomePrerender() {
           <p><a class="df-btn df-btn-primary" href="/pricing">Choose Studio annual</a></p>
         </div>
       </section>
-    </main>`
+    </main>
+    <footer class="df-footer">
+      <div class="df-footer-inner">
+        <span>Paseo Code</span>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="mailto:support@aigeamy.com">support@aigeamy.com</a>
+      </div>
+    </footer>`
 }
 
 function buildPricingPrerender() {
