@@ -1,3 +1,9 @@
 name = "my-paseocode"
 pages_build_output_dir = "./dist"
 compatibility_date = "2026-05-07"
+
+[[d1_databases]]
+binding = "DB"
+# Shared production analytics D1. Rows are isolated by site_key.
+database_name = "openclaw-launch"
+database_id = "5c31068a-d85a-4c83-9efe-01e2de1ad22b"
