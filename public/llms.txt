@@ -1,0 +1,21 @@
+# Paseo Code
+
+Turn agent coding work into supervised plans, sandboxed execution, review-ready outputs, pull request handoff, and a clean checkout path for teams.
+
+Website: https://paseocode.space/
+Pricing: https://paseocode.space/pricing/
+Checkout: https://paseocode.space/checkout/
+Support: support@aigeamy.com
+Type: Hosted SaaS workflow product
+
+Problem:
+- Teams need a quotable product definition, pricing path, evidence trail, and checkout route.
+
+Solution:
+- Paseo Code provides a hosted workflow with public pricing, structured evidence, support contact, and report or receipt outputs.
+
+Useful pages:
+- Home: https://paseocode.space/
+- Pricing: https://paseocode.space/pricing/
+- Resources: https://paseocode.space/resources/
+- Sitemap: https://paseocode.space/sitemap.xml

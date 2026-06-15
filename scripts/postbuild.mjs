@@ -11,9 +11,9 @@ const sourceIndexPath = path.join(distDir, 'index.html')
 const keywordSourcePath = path.join(rootDir, 'src', 'content', 'keyword-pages.ts')
 const origin = 'https://paseocode.space'
 const siteName = 'Paseo Code'
-const defaultTitle = 'Paseo Code | Agent Coding Workspace'
+const defaultTitle = 'Paseo Code - Agent Coding Workspace for Plans, Sandboxes, and Reviews'
 const defaultDescription =
-  'Paseo Code turns agent coding work into supervised plans, sandboxed execution, review-ready outputs, and a clean checkout path for teams.'
+  'Turn agent coding work into supervised plans, sandboxed execution, review-ready outputs, pull request handoff, and a clean checkout path for teams.'
 
 const indexablePaths = [
   '/',

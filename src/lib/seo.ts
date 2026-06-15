@@ -3,9 +3,9 @@ import type { RouteView } from './routing'
 
 const liveOrigin = 'https://paseocode.space'
 const siteName = 'Paseo Code'
-const defaultTitle = 'Paseo Code | Agent Coding Workspace'
+const defaultTitle = 'Paseo Code - Agent Coding Workspace for Plans, Sandboxes, and Reviews'
 const defaultDescription =
-  'Paseo Code turns agent coding work into supervised plans, sandboxed execution, review-ready outputs, and a clean checkout path for teams.'
+  'Turn agent coding work into supervised plans, sandboxed execution, review-ready outputs, pull request handoff, and a clean checkout path for teams.'
 
 const canonicalLinkId = 'paseocode-canonical-link'
 const structuredDataScriptId = 'paseocode-structured-data'
