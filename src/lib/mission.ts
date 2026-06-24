@@ -164,7 +164,7 @@ export function analyzeMissionSelection(selection: MissionSelection): MissionRes
   const nextSteps = [
     'Name the first repository mission and the commands the agent may run.',
     'Keep Studio annual selected unless private runners or heavy GitHub automation already require Scale.',
-    'Open Creem checkout in the centered popup, then return to the homepage for onboarding.',
+    'Open Polar checkout in the centered popup, then return to the homepage for onboarding.',
     'Move only repeatable, reviewable workflows into scheduled or terminal-first runs.',
   ]
 

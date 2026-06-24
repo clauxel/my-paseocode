@@ -98,7 +98,7 @@ const plans: Array<{
 const proofItems = [
   { label: 'Default plan', value: 'Studio', detail: 'Middle tier selected before checkout' },
   { label: 'Annual savings', value: '50%', detail: 'Annual billing is active by default' },
-  { label: 'Checkout flow', value: 'Popup', detail: 'Creem opens centered while the page stays visible' },
+  { label: 'Checkout flow', value: 'Popup', detail: 'Polar opens centered while the page stays visible' },
   { label: 'Agent lanes', value: '4', detail: 'Plan, inspect, implement, and verify before handoff' },
 ]
 
@@ -120,7 +120,7 @@ const workflowCards = [
   },
   {
     title: 'Sandboxed checkout path',
-    body: 'Make tool boundaries and plan choice visible, then open secure Creem payment without replacing the page.',
+    body: 'Make tool boundaries and plan choice visible, then open secure Polar payment without replacing the page.',
     icon: <ShieldCheck size={21} />,
   },
 ]
@@ -165,7 +165,7 @@ const legalPrivacySections = [
   {
     title: 'Service providers and third parties',
     paragraphs: [
-      'We use service providers such as Cloudflare for hosting, security, routing, and analytics infrastructure, and Creem for hosted checkout and payment processing.',
+      'We use service providers such as Cloudflare for hosting, security, routing, and analytics infrastructure, and Polar for hosted checkout and payment processing.',
       'Payment details are handled by the payment provider. We do not ask users to send card numbers, API keys, passwords, or repository secrets through email or this public planner.',
       'Third-party services process information under their own terms and privacy practices. Do not proceed with checkout or external links if you do not accept those practices.',
     ],
@@ -224,7 +224,7 @@ const legalTermsSections = [
   {
     title: 'Payments, renewals, and refunds',
     paragraphs: [
-      'Payments are processed by Creem in a hosted popup window. Successful checkouts return the user to the homepage.',
+      'Payments are processed by Polar in a hosted popup window. Successful checkouts return the user to the homepage.',
       'Displayed annual pricing reflects a 50% discount versus the monthly run-rate for the same plan. Prices, plan names, features, and availability may change before purchase.',
       'Unless a separate written agreement says otherwise, purchases are final to the maximum extent permitted by law. If the payment provider, consumer law, or a written policy requires a refund, that required rule controls.',
       'Chargebacks, payment abuse, or attempted circumvention of checkout may result in suspension, cancellation, or refusal of service.',
@@ -241,7 +241,7 @@ const legalTermsSections = [
   {
     title: 'Third-party services',
     paragraphs: [
-      'Cloudflare, Creem, GitHub, model providers, browser tools, infrastructure providers, and other third-party services may be involved in hosting, checkout, integrations, or customer workflows.',
+      'Cloudflare, Polar, GitHub, model providers, browser tools, infrastructure providers, and other third-party services may be involved in hosting, checkout, integrations, or customer workflows.',
       'We are not responsible for third-party services, third-party outages, payment provider decisions, external repositories, external links, or third-party terms.',
       'Your use of third-party services is governed by the applicable third-party terms, privacy policies, account rules, and fees.',
     ],
@@ -508,7 +508,7 @@ export default function App() {
     trackEvent('mission_planner_change', { key, value })
   }
 
-  async function startHostedCheckout(planId: PlanId, nextBilling: Billing, loadingKey: string, provider = 'creem') {
+  async function startHostedCheckout(planId: PlanId, nextBilling: Billing, loadingKey: string, provider = 'polar') {
     setSelectedPlanId(planId)
     setBilling(nextBilling)
     setCheckoutLoadingKey(loadingKey)
@@ -518,7 +518,7 @@ export default function App() {
     const popup = openCenteredCheckoutWindow()
 
     try {
-      const url = await createCheckoutSession(planId, nextBilling, provider === 'nowpayments' ? '/api/nowpayments-checkout' : '/api/checkout')
+      const url = await createCheckoutSession(planId, nextBilling, provider === 'polar' ? '/api/polar-checkout' : '/api/checkout')
       const popupOpened = sendPopupToCheckout(popup, url)
       if (!popupOpened) {
         try {
@@ -645,7 +645,7 @@ export default function App() {
           {checkoutUrl ? (
             <div className="df-checkout-copy">
               <p className="df-eyebrow">Secure checkout</p>
-              <h2 id="checkout-title">Creem checkout opened.</h2>
+              <h2 id="checkout-title">Polar checkout opened.</h2>
               <p className="df-muted">
                 Complete payment in the centered popup. This page stays in place and returns to the homepage after success.
               </p>
@@ -668,7 +668,7 @@ export default function App() {
               <p className="df-eyebrow">Popup needed</p>
               <h2 id="checkout-title">Checkout could not open yet.</h2>
               <p className="df-muted">
-                Allow the payment popup and try again. Paseo Code keeps payment in a separate Creem window so the original page is not replaced.
+                Allow the payment popup and try again. Paseo Code keeps payment in a separate Polar window so the original page is not replaced.
               </p>
               <div className="df-checkout-actions">
                 <button
@@ -879,7 +879,7 @@ export default function App() {
                 <button
                   type="button"
                   className="df-btn df-btn-ghost"
-                  onClick={() => void startHostedCheckout(plan.id, billing, `${loadingKey}-wallet`, 'nowpayments')}
+                  onClick={() => void startHostedCheckout(plan.id, billing, `${loadingKey}-wallet`, 'polar')}
                   disabled={checkoutLoadingKey !== null}
                 >
                   {checkoutLoadingKey === `${loadingKey}-wallet` ? 'Opening USDC wallet...' : 'Pay with USDC Wallet'}
@@ -903,7 +903,7 @@ export default function App() {
           </article>
           <article>
             <h3>Does payment replace this page?</h3>
-            <p>No. Checkout opens in a centered Creem popup and the product page stays visible behind a blurred overlay.</p>
+            <p>No. Checkout opens in a centered Polar popup and the product page stays visible behind a blurred overlay.</p>
           </article>
         </div>
       ) : null}
@@ -984,7 +984,7 @@ export default function App() {
             <div className="df-hero-proof">
               <div>
                 <span>Default path</span>
-                <strong>Planner to Studio annual to Creem popup to homepage return</strong>
+                <strong>Planner to Studio annual to Polar popup to homepage return</strong>
               </div>
               <div>
                 <span>Best-fit work</span>
@@ -1143,7 +1143,7 @@ export default function App() {
           <div>
             <p className="df-eyebrow">Recommended next step</p>
             <h2>Use the planner first, then keep Studio annual selected if the mission fit is clear.</h2>
-            <p>Checkout stays in a centered Creem popup, with annual billing selected by default.</p>
+            <p>Checkout stays in a centered Polar popup, with annual billing selected by default.</p>
           </div>
           <div className="df-article-cta-actions">
             <button type="button" className="df-btn df-btn-primary" onClick={() => chooseStudioAnnual(`article-${page.path}`)}>

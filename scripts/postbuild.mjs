@@ -136,7 +136,7 @@ await writeStaticPage('/privacy', {
     {
       heading: 'Providers and contact',
       paragraphs: [
-        'Cloudflare supports hosting and security infrastructure. Creem supports hosted checkout and payment processing.',
+        'Cloudflare supports hosting and security infrastructure. Polar supports hosted checkout and payment processing.',
         'Privacy and support requests should be sent to support@aigeamy.com.',
       ],
     },
@@ -181,8 +181,8 @@ await writeStaticPage('/terms', {
     {
       heading: 'Payments and third-party services',
       paragraphs: [
-        'Payments are processed by Creem in a hosted popup window. Successful checkouts return the user to the homepage.',
-        'Cloudflare, Creem, GitHub, model providers, infrastructure providers, and other third-party services may be involved in hosting, checkout, integrations, or workflows.',
+        'Payments are processed by Polar in a hosted popup window. Successful checkouts return the user to the homepage.',
+        'Cloudflare, Polar, GitHub, model providers, infrastructure providers, and other third-party services may be involved in hosting, checkout, integrations, or workflows.',
       ],
     },
     {
@@ -305,7 +305,7 @@ function buildHomePrerender() {
         <div>
           <p class="df-eyebrow">Paseo Code agent workspace</p>
           <h1>Turn coding-agent runs into reviewable work.</h1>
-          <p class="df-lede">Plan a repository mission, keep Studio annual selected, and open secure Creem checkout without losing the product page.</p>
+          <p class="df-lede">Plan a repository mission, keep Studio annual selected, and open secure Polar checkout without losing the product page.</p>
           <p><a class="df-btn df-btn-primary" href="/pricing">Choose Studio annual</a></p>
         </div>
       </section>

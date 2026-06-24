@@ -58,7 +58,7 @@ export const keywordPages: KeywordPage[] = [
       {
         heading: 'How checkout stays focused',
         paragraphs: [
-          'Payment opens in a centered Creem popup. The original Paseo Code page stays visible behind a blurred overlay, so the buyer keeps the plan and trust context while finishing checkout.',
+          'Payment opens in a centered Polar popup. The original Paseo Code page stays visible behind a blurred overlay, so the buyer keeps the plan and trust context while finishing checkout.',
           'After payment succeeds, the popup returns control to the homepage. That keeps the product flow calm and avoids sending the buyer away from the domain they chose.',
         ],
       },
@@ -77,7 +77,7 @@ export const keywordPages: KeywordPage[] = [
       {
         question: 'Does checkout leave the page?',
         answer:
-          'No. Creem checkout opens in a centered popup while the original page stays open with a blurred background.',
+          'No. Polar checkout opens in a centered popup while the original page stays open with a blurred background.',
       },
     ],
   },
@@ -282,7 +282,7 @@ export const keywordPages: KeywordPage[] = [
       {
         heading: 'What happens after checkout',
         paragraphs: [
-          'Creem checkout opens in a centered popup. After successful payment, the popup returns the buyer to the Paseo Code homepage with the original site still available for context.',
+          'Polar checkout opens in a centered popup. After successful payment, the popup returns the buyer to the Paseo Code homepage with the original site still available for context.',
         ],
       },
     ],
@@ -339,7 +339,7 @@ export const keywordPages: KeywordPage[] = [
       {
         heading: 'Payment without losing context',
         paragraphs: [
-          'The Studio annual checkout opens as a Creem popup. The page behind it remains blurred and visible, so the buyer can finish payment without forgetting why the plan was selected.',
+          'The Studio annual checkout opens as a Polar popup. The page behind it remains blurred and visible, so the buyer can finish payment without forgetting why the plan was selected.',
         ],
       },
     ],
