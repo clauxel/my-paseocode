@@ -1,5 +1,12 @@
 # Website Changelog
 
+## 2026-07-09 00:09 CST - Pricing asset redirect loop guard
+
+- Change summary: Adjusted Worker Assets lookup so clean static pages such as `/pricing/` are fetched through their public directory URL before any index-file fallback, avoiding a self-redirecting 307 response from the asset layer.
+- Touched files: `worker/index.js`.
+- Verification: pending `npm test`, Worker deploy, and live `/pricing/` post-deploy check.
+- Deployment/Git status: pending commit, push, deploy, and live verification at entry time.
+
 ## 2026-07-08 23:05 CST - Live patrol follow-up cleanup
 
 - Change summary: Shortened generated homepage title metadata after live patrol found the postbuild title still above the target length.
