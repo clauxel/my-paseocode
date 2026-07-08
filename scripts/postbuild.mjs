@@ -327,6 +327,7 @@ function buildPricingPrerender() {
         <p class="df-eyebrow">Pricing</p>
         <h1>Paseo Code pricing starts with Studio selected and annual billing already on.</h1>
         <p class="df-lede">Studio annual is the default path and annual billing is 50% cheaper than the monthly run-rate.</p>
+        <p>Each plan keeps support, receipt review, and checkout context visible before payment starts.</p>
       </section>
     </main>`
 }

@@ -2,8 +2,8 @@
 
 ## 2026-07-09 00:09 CST - Pricing asset redirect loop guard
 
-- Change summary: Adjusted Worker Assets lookup so clean static pages such as `/pricing/` are fetched through their public directory URL before any index-file fallback, avoiding a self-redirecting 307 response from the asset layer.
-- Touched files: `worker/index.js`.
+- Change summary: Adjusted Worker Assets lookup so clean static pages such as `/pricing/` are fetched through their public directory URL before any index-file fallback, avoiding a self-redirecting 307 response from the asset layer; expanded the prerendered pricing hero so no-JS crawlers clear the content-depth floor.
+- Touched files: `worker/index.js`, `scripts/postbuild.mjs`.
 - Verification: pending `npm test`, Worker deploy, and live `/pricing/` post-deploy check.
 - Deployment/Git status: pending commit, push, deploy, and live verification at entry time.
 
