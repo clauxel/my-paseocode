@@ -357,6 +357,10 @@ async function fetchAsset(request, env) {
     const requestUrl = new URL(request.url)
     const normalizedPath = requestUrl.pathname.replace(/\/+$/, '') || '/'
 
+    if (!staticAssetPaths.has(normalizedPath) && !/\.[a-z0-9]+$/i.test(normalizedPath)) {
+      return noIndexNotFoundResponse(request)
+    }
+
     if (staticAssetPaths.has(normalizedPath)) {
       const assetUrl = new URL(request.url)
       assetUrl.pathname = normalizedPath === '/' ? '/' : `${normalizedPath}/index.html`

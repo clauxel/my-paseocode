@@ -1,5 +1,11 @@
 # Website Changelog
 
+## 2026-07-08 22:00 CST - Top decile patrol SEO repair
+
+- Change summary: Removed the duplicate hidden H1 pattern and added noindex 404 handling for unknown clean paths.
+- Verification: local build/test/patrol checks were run for the affected surface before commit; production deployment and live verification are tracked in the release pass for this patrol batch.
+- Deployment/Git status: pending commit, push, deploy, and live post-deploy verification at entry time.
+
 ## 2026-06-08 16:06:51 CST - SEO/GEO + Build Checklist Repair
 
 Scope: repaired P0/P1 checklist issues for paseocode.space.
