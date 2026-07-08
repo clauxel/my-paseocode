@@ -1,5 +1,11 @@
 # Website Changelog
 
+## 2026-07-08 23:05 CST - Live patrol follow-up cleanup
+
+- Change summary: Shortened generated homepage title metadata after live patrol found the postbuild title still above the target length.
+- Verification: rebuilt the affected static output or router bundle and reran local metadata/route checks before redeploy.
+- Deployment/Git status: pending commit, push, redeploy, and live post-deploy verification at entry time.
+
 ## 2026-07-08 22:00 CST - Top decile patrol SEO repair
 
 - Change summary: Removed the duplicate hidden H1 pattern and added noindex 404 handling for unknown clean paths.
